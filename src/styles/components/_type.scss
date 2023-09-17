@@ -1,0 +1,47 @@
+@font-face {
+  font-family: ITC Garamond Std Light;
+  src: url(../assets/ITCGaramondStd-LtNarrow.otf) format("opentype");
+} 
+@font-face {
+  font-family: ITC Garamond Std Regular;
+  src: url(../assets/ITCGaramondBookNarrowRegular.otf) format("opentype");
+} 
+@font-face {
+  font-family: PP Neue Montreal;
+  font-weight: 400;
+  src: url(../assets/PPNeueMontreal-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: PP Neue Montreal;
+  font-weight: 530;
+  src: url(../assets/PPNeueMontreal-Medium.otf) format("opentype");
+}
+
+
+body, .menu__el a {
+  font-family: PP Neue Montreal, sans-serif;
+  font-size: $size-text;
+  line-height: 1.45;
+  color: $c-text;
+}
+
+.menu__flo a, .typo-diff, .title {
+  font-family: ITC Garamond Std Light, serif;
+}
+
+/* titles */
+.title{
+ font-size: $size-title;
+ font-weight: normal;
+  &--big{
+    font-family: PP Neue Montreal, sans-serif;
+    font-size: $size-title-big;
+    line-height: 1;
+  }
+}
+.typo-dif{
+  font-family: ITC Garamond Std Light, serif;
+  font-size: $size-title-span;
+  line-height: 0.72;
+}
+

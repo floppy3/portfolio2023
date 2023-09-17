@@ -1,0 +1,28 @@
+.circle-yellow{
+    width: 763px;
+    height: 469px;
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    background:#FFF973;
+    filter: blur(62px);
+    z-index: -10;
+    -webkit-border-radius: 381.5px / 234.5px;
+    -moz-border-radius:    381.5px / 234.5px; 
+    border-radius:         381.5px / 234.5px; 
+}
+
+.circle-violet{
+    width: 508px;
+    height: 546px;
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    background:#E698ED;
+    filter: blur(101px);
+    z-index: -10;
+    -webkit-border-radius: 254px / 273px;
+    -moz-border-radius:    254px / 273px; 
+    border-radius:         254px / 273px; 
+    transform: translateX(-50%);
+}

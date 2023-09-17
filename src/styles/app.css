@@ -1,0 +1,166 @@
+@font-face {
+  font-family: ITC Garamond Std Light;
+  src: url(../assets/ITCGaramondStd-LtNarrow.otf) format("opentype");
+}
+@font-face {
+  font-family: ITC Garamond Std Regular;
+  src: url(../assets/ITCGaramondBookNarrowRegular.otf) format("opentype");
+}
+@font-face {
+  font-family: PP Neue Montreal;
+  font-weight: 400;
+  src: url(../assets/PPNeueMontreal-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: PP Neue Montreal;
+  font-weight: 530;
+  src: url(../assets/PPNeueMontreal-Medium.otf) format("opentype");
+}
+body, .menu__el a {
+  font-family: PP Neue Montreal, sans-serif;
+  font-size: 22px;
+  line-height: 1.45;
+  color: #0F0F0F;
+}
+
+.menu__flo a, .typo-diff, .title {
+  font-family: ITC Garamond Std Light, serif;
+}
+
+/* titles */
+.title {
+  font-size: 78px;
+  font-weight: normal;
+}
+.title--big {
+  font-family: PP Neue Montreal, sans-serif;
+  font-size: 120px;
+  line-height: 1;
+}
+
+.typo-dif {
+  font-family: ITC Garamond Std Light, serif;
+  font-size: 135px;
+  line-height: 0.72;
+}
+
+.circle-yellow {
+  width: 763px;
+  height: 469px;
+  position: absolute;
+  top: -10%;
+  left: -20%;
+  background: #FFF973;
+  filter: blur(62px);
+  z-index: -10;
+  border-radius: 381.5px/234.5px;
+}
+
+.circle-violet {
+  width: 508px;
+  height: 546px;
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  background: #E698ED;
+  filter: blur(101px);
+  z-index: -10;
+  border-radius: 254px/273px;
+  transform: translateX(-50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0F0F0F;
+}
+
+body {
+  background-color: #FCFCFC;
+}
+
+/* NAV */
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 34px 44px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.menu__flo {
+  flex-grow: 1;
+}
+.menu__liste {
+  display: flex;
+  gap: 44px;
+}
+.menu__burger {
+  display: none;
+}
+
+/* logo */
+.menu__flo a {
+  font-size: 25px;
+  color: #0F0F0F;
+  padding: 4px 10px 2px;
+  border: 1px solid #0F0F0F;
+  border-radius: 20px;
+}
+
+.main {
+  margin-top: 104px;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 44px;
+  padding-top: 88px;
+}
+.about .title--big {
+  max-width: 718px;
+}
+.about p {
+  max-width: 450px;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 44px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #0F0F0F;
+}
+footer a {
+  font-size: 18px;
+}
+footer ul {
+  display: flex;
+  gap: 44px;
+}/*# sourceMappingURL=app.css.map */
