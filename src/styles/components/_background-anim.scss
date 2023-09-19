@@ -1,7 +1,7 @@
-/*.circle-yellow{
+.circle-yellow{
     width: 763px;
     height: 469px;
-    position: absolute;
+    position: fixed;
     top: -10%;
     left: -20%;
     background:#FFF973;
@@ -15,7 +15,7 @@
 .circle-violet{
     width: 508px;
     height: 546px;
-    position: absolute;
+    position: fixed;
     bottom: -15%;
     left: 50%;
     background:#E698ED;
@@ -25,4 +25,4 @@
     -moz-border-radius:    254px / 273px; 
     border-radius:         254px / 273px; 
     transform: translateX(-50%);
-} */
+}
