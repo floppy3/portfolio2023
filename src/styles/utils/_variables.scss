@@ -2,9 +2,40 @@ $c-bg: #FCFCFC;
 $c-alt: #FCFCFC;
 $c-text: #0F0F0F;
 
-$size-footer: 18px;
-$size-text: 22px;
-$size-link: 27px;
-$size-title: 78px;
-$size-title-big: 120px;
-$size-title-span: 135px;
+$q-mobile1: 380px;
+$q-tablet1: 540px;
+$q-tablet2: 650px;
+$q-tablet3: 730px;
+$q-tablet4: 800px;
+$q-laptop: 1024px;
+$q-desktop: 1200px;
+$q-desktop2: 1450px;
+
+:root{
+    --footer: 15px;
+    --text: 18px;
+    --link: 22px;
+    --title: 42px;
+    --titlebig: 52px;
+    --titlespan: 58px;
+}
+
+
+@media (min-width: $q-mobile1) {
+    :root{
+        --titlebig: 60px;
+        --titlespan: 68px;
+    }
+}
+
+
+@media (min-width: $q-desktop) {
+    :root{
+        --footer: 18px;
+        --text: 22px;
+        --link: 27px;
+        --title: 78px;
+        --titlebig: 120px;
+        --titlespan: 135px;
+    }
+}
