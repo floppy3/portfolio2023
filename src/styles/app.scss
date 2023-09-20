@@ -24,7 +24,6 @@ a{
 }
 body{
     background-color: $c-bg;
-    overflow: hidden;
 }
 
 
@@ -130,6 +129,13 @@ body[data-menu] .menu__liste {
             bottom: 132px;
             transform: translateX(50%);
         }
+    }
+
+    .skills{
+        display: inline-block;
+        padding: 9px 24px 10px;
+        border: 1px solid #0F0F0F;
+        border-radius: 36px;
     }
 
     @media (min-width:$q-mobile1){
