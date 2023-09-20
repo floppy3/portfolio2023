@@ -27,6 +27,18 @@ body, .menu__el a {
   color: $c-text;
 }
 
+.menu__el a {
+  font-family: ITC Garamond Std Light, serif;
+  font-size: 79px;
+  @media (min-width: $q-tablet2){
+    font-size: 98px;
+  }
+  @media (min-width: $q-laptop){
+    font-family: PP Neue Montreal, sans-serif;
+    font-size: var(--text);
+  }
+}
+
 .menu__flo a, .typo-diff, .title {
   font-family: ITC Garamond Std Light, serif;
 }
