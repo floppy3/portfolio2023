@@ -25,6 +25,7 @@ body, .menu__el a {
   font-size: var(--text);
   line-height: 1.45;
   color: $c-text;
+  font-weight: 400;
 }
 
 .menu__el a {
@@ -45,12 +46,21 @@ body, .menu__el a {
 
 /* titles */
 .title{
- font-size: var(--sizetitle);
- font-weight: normal;
+  font-family: ITC Garamond Std Regular;
+  font-weight: normal;
+  line-height: 1;
+  font-size: var(--title);
   &--big{
     font-family: PP Neue Montreal, sans-serif;
+    font-weight: 400;
     font-size: var(--titlebig);
     line-height: 1;
+  }
+  &--little{
+    font-family: PP Neue Montreal, sans-serif;
+    font-weight: 400;
+    font-size: var(--titlelittle);
+    text-transform: uppercase;
   }
 }
 .typo-dif{
