@@ -27,15 +27,30 @@ $q-desktop2: 1450px;
         --titlespan: 68px;
     }
 }
-
+@media (min-width: $q-laptop) {
+    :root{
+        --titlebig: 88px;
+        --titlespan: 100px;
+    }
+}
 
 @media (min-width: $q-desktop) {
+    :root{
+        --footer: 16px;
+        --text: 20px;
+        --link: 25px;
+        --title: 71px;
+        --titlebig: 109px;
+        --titlespan: 121px;
+    }
+}
+@media (min-width: $q-desktop2) {
     :root{
         --footer: 18px;
         --text: 22px;
         --link: 27px;
         --title: 78px;
         --titlebig: 120px;
-        --titlespan: 135px;
+        --titlespan: 130px;
     }
 }
