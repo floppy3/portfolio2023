@@ -78,3 +78,31 @@ body, .menu__el a {
   font-weight: 530;
   text-transform: uppercase;
 }
+
+
+/* LAST */ 
+
+.last{
+  .txt{
+    font-size: 34px;
+    span{
+      font-size: 39px;
+      font-family: ITC Garamond Std Light;
+      font-weight: normal;
+      vertical-align: 1%;
+      line-height: 0.72;
+    }
+    @media (min-width: $q-laptop){
+      font-size: 38px;
+      span{
+      font-size: 43px;
+      }
+    }
+    @media (min-width: $q-laptop){
+      font-size: 42px;
+      span{
+      font-size: 47px;
+      }
+    }
+  }
+}

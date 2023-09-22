@@ -77,7 +77,7 @@ body{
             height: auto;
             left: 0;
             flex-direction: initial;
-            background-color: none;
+            background-color: initial;
         }
     }
     &__burger{
@@ -250,21 +250,85 @@ body[data-menu] .scroll-indication{
 
 /* PROJECTS */
 .projects{
+    margin: 0 33px;
+    div{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40vh;
+        .title{
+            margin-bottom: 16px;
+            &--little{
+                margin-bottom: 8px;
+            }
+        }
+    }
     .txt{
+        order: 4;
+        margin-top: 24px;
         @media (min-width:$q-laptop){
             max-width: 630px;
         }
     }
 
+    .work{
+        width: 100%;
+        -webkit-box-shadow: 9px 13px 18px 0px rgba(166,166,166,0.45);
+        -moz-box-shadow: 9px 13px 18px 0px rgba(166,166,166,0.45);
+        box-shadow: 9px 13px 18px 0px rgba(166,166,166,0.45);
+    }
+
+    @media (min-width:$q-mobile1){
+        margin: 0px 30px;
+    }
+    @media (min-width:$q-laptop){
+        margin: 0px 44px;
+    }
+
+}
+
+/* LAST */ 
+
+.last{
+    margin: 0px 33px;
+    .txt{
+      margin-bottom: 19px;
+    }
+    @media (min-width:$q-mobile1){
+        margin: 0px 30px;
+    }
+    @media (min-width:$q-laptop){
+        margin: 0px 44px;
+        .txt{
+            margin-bottom: 132px;
+          }
+    }
+    @media (min-width: $q-desktop2){
+        .txt{
+            margin-bottom: 142px;
+          }
+    }
 }
 
 
 
 
-/* FOOTER */
 
+/* FOOTER */
 footer{
-    display: none;
+    background-color: transparent;
+    .place{
+        display: none;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 30px;
+    border-top: 1px solid #0F0F0F;
+    a{
+        /* color: $c-text; */
+        font-size: var(--footer);
+    }
+    
     @media (min-width: $q-laptop){
         display: flex;
         justify-content: space-between;
@@ -281,6 +345,9 @@ footer{
         ul{
             display: flex;
             gap: 44px;
+        }
+        .place{
+            display: initial;
         }
     }
     @media (min-width: $q-desktop2){
