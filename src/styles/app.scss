@@ -181,6 +181,9 @@ body[data-menu] .skills{
 body[data-menu] main *:not(.circle-yellow, .circle-violet){
     opacity: 0;
     cursor: none;
+    /* @media (min-width:$laptop){
+        
+    } */
 }
 body[data-menu] main{
     background-color: $c-bg;

@@ -20,6 +20,7 @@
         -webkit-border-radius: 381.5px / 234.5px;
         -moz-border-radius:    381.5px / 234.5px; 
         border-radius:         381.5px / 234.5px; 
+        transition: none;
     }
 }
 
@@ -47,6 +48,7 @@
         -moz-border-radius:    254px / 273px; 
         border-radius:         254px / 273px; 
         transform: translateX(-50%);
+        transition: none;
     }
 }
 
@@ -61,5 +63,14 @@ body[data-menu] .circle-violet{
     left: -25%;
     z-index: 2;
     transition-delay: 1s;
-    transition: all 0.25s ease-in-out;
+    transition: left 0.25s ease-in-out, bottom 0.2s ease-in-out;
 }
+
+/* @media (min-width: $q-laptop){
+    body[data-menu] .circle-yellow{
+        transition: none;
+    }
+    body[data-menu] .circle-violet{
+        transition: none;
+    }
+} */

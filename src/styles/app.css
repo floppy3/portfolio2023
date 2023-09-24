@@ -235,6 +235,7 @@ body, .menu__el a {
     left: -20%;
     filter: blur(62px);
     border-radius: 381.5px/234.5px;
+    transition: none;
   }
 }
 
@@ -260,6 +261,7 @@ body, .menu__el a {
     z-index: -10;
     border-radius: 254px/273px;
     transform: translateX(-50%);
+    transition: none;
   }
 }
 
@@ -275,9 +277,17 @@ body[data-menu] .circle-violet {
   left: -25%;
   z-index: 2;
   transition-delay: 1s;
-  transition: all 0.25s ease-in-out;
+  transition: left 0.25s ease-in-out, bottom 0.2s ease-in-out;
 }
 
+/* @media (min-width: $q-laptop){
+    body[data-menu] .circle-yellow{
+        transition: none;
+    }
+    body[data-menu] .circle-violet{
+        transition: none;
+    }
+} */
 * {
   margin: 0;
   padding: 0;
@@ -469,6 +479,9 @@ body[data-menu] .skills {
 body[data-menu] main *:not(.circle-yellow, .circle-violet) {
   opacity: 0;
   cursor: none;
+  /* @media (min-width:$laptop){
+
+  } */
 }
 
 body[data-menu] main {
