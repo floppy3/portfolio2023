@@ -316,6 +316,9 @@ body[data-menu] main{
         padding-top: 192px;
         /* 88px + 104px*/
     }
+    @media (min-width:$q-desktop3){
+        margin: 0px 132px;
+    }
 }
 
 body[data-menu] .scroll-indication{
@@ -379,9 +382,6 @@ body[data-menu] .scroll-indication{
         width: 100%;
         height: 100%;
         position: absolute;
-        -webkit-box-shadow: 9px 13px 18px 0px rgba(166,166,166,0.45);
-        -moz-box-shadow: 9px 13px 18px 0px rgba(166,166,166,0.45);
-        box-shadow: 9px 13px 18px 0px rgba(166,166,166,0.45);
         //max-width: 442px;
     }
 
@@ -414,12 +414,34 @@ body[data-menu] .scroll-indication{
 
 /* Projects LAPTOP */
 .projects{
+    .cta{
+        display: none;
+    }
     @media (min-width:$q-laptop){
         .left-side{
             min-height: 100vh;
         }
         .left-side__el{
             margin-bottom: 50vh;
+        }
+        .ctas{
+            order: 4;
+            display: flex;
+            gap: 24px;
+        }
+        .cta{
+            display: inline-block;
+            font-size: var(--link);
+            color: $c-bg;
+            line-height: 1;
+            width: fit-content;
+            margin-top: 16px;
+            padding: 10px 40px;
+            border-image: initial;
+            border-radius: 54px;
+	        background-color: $c-text;
+            order: 4;
+            box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.18);
         }
         .right-side{
             display: flex;
@@ -429,6 +451,7 @@ body[data-menu] .scroll-indication{
             position: relative;
             overflow: hidden;
             margin: 0 auto;
+            box-shadow: 9px 13px 18px 0px rgb(133 132 132 / 19%);
 
         }
     }

@@ -637,6 +637,11 @@ body[data-menu] main {
     /* 88px + 104px*/
   }
 }
+@media (min-width: 1600px) {
+  .about {
+    margin: 0px 132px;
+  }
+}
 
 body[data-menu] .scroll-indication {
   position: relative;
@@ -699,7 +704,6 @@ body[data-menu] .scroll-indication {
   width: 100%;
   height: 100%;
   position: absolute;
-  box-shadow: 9px 13px 18px 0px rgba(166, 166, 166, 0.45);
 }
 .projects .right-side {
   display: none;
@@ -737,12 +741,36 @@ body[data-menu] .scroll-indication {
 }
 
 /* Projects LAPTOP */
+.projects .cta {
+  display: none;
+}
 @media (min-width: 1024px) {
   .projects .left-side {
     min-height: 100vh;
   }
   .projects .left-side__el {
     margin-bottom: 50vh;
+  }
+  .projects .ctas {
+    order: 4;
+    display: flex;
+    gap: 24px;
+  }
+  .projects .cta {
+    display: inline-block;
+    font-size: var(--link);
+    color: #FCFCFC;
+    line-height: 1;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 16px;
+    padding: 10px 40px;
+    -o-border-image: initial;
+       border-image: initial;
+    border-radius: 54px;
+    background-color: #0F0F0F;
+    order: 4;
+    box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.18);
   }
   .projects .right-side {
     display: flex;
@@ -752,6 +780,7 @@ body[data-menu] .scroll-indication {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+    box-shadow: 9px 13px 18px 0px rgba(133, 132, 132, 0.19);
   }
 }
 
