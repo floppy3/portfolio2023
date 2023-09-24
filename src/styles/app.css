@@ -536,6 +536,7 @@ body[data-menu] main {
   z-index: 1;
   right: 33px;
   bottom: 32px;
+  opacity: 1;
 }
 @media (min-width: 380px) {
   .about .scroll-indication {
@@ -665,15 +666,15 @@ body[data-menu] .scroll-indication {
   margin: 0 33px 0;
   padding-top: 20vh;
 }
-.projects div {
+.projects .left-side__el {
   display: flex;
   flex-direction: column;
   margin-bottom: 20vh;
 }
-.projects div .title {
+.projects .left-side__el .title {
   margin-bottom: 16px;
 }
-.projects div .title--little {
+.projects .left-side__el .title--little {
   margin-bottom: 8px;
 }
 .projects .txt {
@@ -691,8 +692,17 @@ body[data-menu] .scroll-indication {
 }
 @media (min-width: 1024px) {
   .projects .work-l {
-    max-width: 442px;
+    display: none;
   }
+}
+.projects .work-r {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-shadow: 9px 13px 18px 0px rgba(166, 166, 166, 0.45);
+}
+.projects .right-side {
+  display: none;
 }
 @media (min-width: 380px) {
   .projects {
@@ -721,7 +731,27 @@ body[data-menu] .scroll-indication {
 }
 @media (min-width: 1024px) {
   .projects {
-    margin: 0px 44px;
+    display: flex;
+    margin: 0px 120px;
+  }
+}
+
+/* Projects LAPTOP */
+@media (min-width: 1024px) {
+  .projects .left-side {
+    min-height: 100vh;
+  }
+  .projects .left-side__el {
+    margin-bottom: 50vh;
+  }
+  .projects .right-side {
+    display: flex;
+    flex-direction: column;
+    width: 442px;
+    height: 442px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
   }
 }
 
