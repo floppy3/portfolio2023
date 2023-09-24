@@ -63,6 +63,9 @@ body, .menu__el a {
     text-transform: uppercase;
   }
 }
+.projects .title{
+  max-width: 15ch;
+}
 .typo-dif{
   font-family: ITC Garamond Std Light, serif;
   font-size: var(--titlespan);

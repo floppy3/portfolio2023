@@ -3,6 +3,7 @@ $c-alt: #FCFCFC;
 $c-text: #0F0F0F;
 
 $q-mobile1: 380px;
+$q-mobile2: 450px;
 $q-tablet1: 540px;
 $q-tablet2: 650px;
 $q-tablet3: 730px;
@@ -27,6 +28,13 @@ $q-desktop3: 1600px;
     :root{
         --titlebig: 60px;
         --titlespan: 68px;
+    }
+}
+@media (min-width: $q-tablet1) {
+    :root{
+        --titlebig: 79px;
+        --titlespan: 85px;
+        --title: 52px;
     }
 }
 @media (min-width: $q-laptop) {
