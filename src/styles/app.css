@@ -225,6 +225,7 @@ body, .menu__el a {
   filter: blur(62px);
   z-index: -10;
   border-radius: 184.5px/162px;
+  transition: left 0.15s ease-in-out;
 }
 @media (min-width: 1024px) {
   .circle-yellow {
@@ -247,6 +248,7 @@ body, .menu__el a {
   filter: blur(85px);
   z-index: -10;
   border-radius: 168.5px/181px;
+  transition: all 0.15s ease-in-out;
 }
 @media (min-width: 1024px) {
   .circle-violet {
@@ -259,6 +261,21 @@ body, .menu__el a {
     border-radius: 254px/273px;
     transform: translateX(-50%);
   }
+}
+
+body[data-menu] .circle-yellow {
+  top: -5%;
+  left: 40%;
+  z-index: 2;
+  transition: left 0.25s ease-in-out;
+}
+
+body[data-menu] .circle-violet {
+  bottom: -10%;
+  left: -25%;
+  z-index: 2;
+  transition-delay: 1s;
+  transition: all 0.25s ease-in-out;
 }
 
 * {
@@ -304,6 +321,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 60;
 }
 @media (min-width: 380px) {
   .menu {
@@ -337,7 +355,6 @@ body {
   flex-direction: column;
   justify-content: center;
   row-gap: 40px;
-  background-color: #FCFCFC;
 }
 @media (min-width: 1024px) {
   .menu__liste {
@@ -449,9 +466,15 @@ body[data-menu] .skills {
   display: none;
 }
 
-/* body[data-menu] main > *:not(.circle-yellow, .circle-violet){
-    opacity: 0;
-} */
+body[data-menu] main *:not(.circle-yellow, .circle-violet) {
+  opacity: 0;
+  cursor: none;
+}
+
+body[data-menu] main {
+  background-color: #FCFCFC;
+}
+
 /* logo */
 .menu__flo a {
   font-size: 22px;

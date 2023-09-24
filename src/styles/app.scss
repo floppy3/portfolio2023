@@ -41,6 +41,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 60;
     @media (min-width: $q-mobile1){
         margin: 32px 30px;
     }
@@ -68,7 +69,7 @@ body{
         flex-direction: column;
         justify-content: center;
         row-gap: 40px;
-        background-color: $c-bg;
+        //background-color: $c-bg;
         //transition: transform 0.4s ease-out;
         @media (min-width: $q-laptop){
             display: flex;
@@ -177,10 +178,13 @@ body[data-menu] .menu__burger span:nth-child(4) {
 body[data-menu] .skills{
     display: none;
 }
-/* body[data-menu] main > *:not(.circle-yellow, .circle-violet){
+body[data-menu] main *:not(.circle-yellow, .circle-violet){
     opacity: 0;
-} */
-
+    cursor: none;
+}
+body[data-menu] main{
+    background-color: $c-bg;
+}
 
 /* logo */
 .menu__flo a{
