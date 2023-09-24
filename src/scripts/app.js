@@ -8,8 +8,10 @@ function toggleNavigation(){
     if(document.body.hasAttribute("data-menu")){
         document.body.removeAttribute("data-menu");
         menuSpan.innerHTML = "Menu";
+        document.body.classList.remove("disable-scrolling");
     }else{
         document.body.setAttribute("data-menu", true);
         menuSpan.innerHTML = "Close";
+        document.body.classList.add("disable-scrolling")
     }
 }

@@ -289,6 +289,12 @@ body {
   background-color: #FCFCFC;
 }
 
+/* disable scroll when menu is open */
+.disable-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 /* NAV */
 .menu {
   display: flex;
@@ -439,6 +445,13 @@ body[data-menu] .menu__burger span:nth-child(4) {
   transform: rotate(135deg);
 }
 
+body[data-menu] .skills {
+  display: none;
+}
+
+/* body[data-menu] main > *:not(.circle-yellow, .circle-violet){
+    opacity: 0;
+} */
 /* logo */
 .menu__flo a {
   font-size: 22px;

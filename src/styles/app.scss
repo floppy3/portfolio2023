@@ -25,7 +25,11 @@ a{
 body{
     background-color: $c-bg;
 }
-
+/* disable scroll when menu is open */
+.disable-scrolling{
+    height: 100%;
+    overflow: hidden;
+}
 
 /* NAV */ 
 
@@ -168,6 +172,14 @@ body[data-menu] .menu__burger span:nth-child(4) {
     top: 8px;
     transform: rotate(135deg);
 }
+
+
+body[data-menu] .skills{
+    display: none;
+}
+/* body[data-menu] main > *:not(.circle-yellow, .circle-violet){
+    opacity: 0;
+} */
 
 
 /* logo */
