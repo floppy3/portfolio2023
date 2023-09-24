@@ -82,6 +82,44 @@ body{
     }
     &__burger{
         z-index: 60;
+        background-color: transparent;
+        position: relative;
+        height: 16px;
+        width: 32px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 0;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        &:active, &:hover{
+            span:nth-child(2){
+                top: 2px;
+            }
+            span:nth-child(4){
+                top: 14px;
+            }
+        }
+        span:not(span:first-child) {
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 32px;
+            background: $c-text;
+            opacity: 1;
+            right: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        span:nth-child(2) {
+            top: 0px;
+          }
+        span:nth-child(3) {
+            top: 8px;
+          }
+        span:nth-child(4) {
+            top: 16px;
+          }
         @media (min-width: $q-laptop){     
             display: none;
         }
@@ -99,6 +137,8 @@ body{
         transform: translateY(0px);
     }
 }
+
+/* ouverture menu*/
 body[data-menu] .menu__liste {
     padding: 0 33px;
     opacity: 1;
@@ -113,6 +153,20 @@ body[data-menu] .menu__liste {
     @media (min-width: $q-laptop){
         transform: none;
     }
+}
+
+/* anim icon menu */
+body[data-menu] .menu__burger span:nth-child(2) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+body[data-menu] .menu__burger span:nth-child(3) {
+    opacity: 0;
+    right: -32px;
+}
+body[data-menu] .menu__burger span:nth-child(4) {
+    top: 8px;
+    transform: rotate(135deg);
 }
 
 
