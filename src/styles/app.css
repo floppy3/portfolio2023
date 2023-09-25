@@ -190,6 +190,7 @@ body, .menu__el a {
 /* LAST */
 .last .txt {
   font-size: 34px;
+  font-weight: 400;
 }
 .last .txt span {
   font-size: 39px;
