@@ -688,7 +688,7 @@ body[data-menu] .scroll-indication {
 }
 @media (min-width: 1024px) {
   .projects .txt {
-    max-width: 630px;
+    max-width: 43ch;
   }
 }
 .projects .work-l {
@@ -736,7 +736,26 @@ body[data-menu] .scroll-indication {
 @media (min-width: 1024px) {
   .projects {
     display: flex;
-    margin: 0px 120px;
+    margin: 0px 90px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  .projects {
+    margin: 0px 110px;
+  }
+}
+@media (min-width: 1300px) {
+  .projects .txt {
+    max-width: 48ch;
+  }
+}
+@media (min-width: 1450px) {
+  .projects {
+    margin: 0px 132px;
+  }
+  .projects .txt {
+    max-width: 48ch;
   }
 }
 
@@ -775,12 +794,25 @@ body[data-menu] .scroll-indication {
   .projects .right-side {
     display: flex;
     flex-direction: column;
-    width: 442px;
-    height: 442px;
+    width: 100%;
+    height: auto;
+    max-width: 390px;
+    max-height: 390px;
     position: relative;
     overflow: hidden;
-    margin: 0 auto;
     box-shadow: 9px 13px 18px 0px rgba(133, 132, 132, 0.19);
+  }
+}
+@media (min-width: 1150px) {
+  .projects .right-side {
+    max-width: 442px;
+    max-height: 442px;
+  }
+}
+@media (min-width: 1200px) {
+  .projects .right-side {
+    max-width: 442px;
+    max-height: 442px;
   }
 }
 
