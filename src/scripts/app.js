@@ -5,6 +5,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 let width = screen.width;
 
+
+/* Burger menu */
 if (width < 1024){
     let menuBurger = document.querySelector('.menu__burger');
     menuBurger.addEventListener('click',toggleNavigation);
@@ -25,6 +27,7 @@ if (width < 1024){
     }
 }
 
+/* scroll indication */
 const scrollIndication = document.querySelector('.scroll-indication');
 if (scrollIndication){
     scrollIndicationAnim();
@@ -43,13 +46,13 @@ function scrollIndicationAnim(){
   });
 }
 
+/* anim split screen pin and scroll */
 const details = gsap.utils.toArray(".left-side__el:not(:first-child)");
-console.log(details);
+
 const photos = gsap.utils.toArray(".work-r:not(:first-child)");
-console.log(photos);
+
 gsap.set(photos, { yPercent: 101 });
 const allPhotos = gsap.utils.toArray(".work-r");
-console.log(allPhotos);
 
 if (width >= 1024){
 
@@ -79,5 +82,54 @@ if (width >= 1024){
           //markers: true
         });
       });
+}
+
+/* change color circle yellow */
+
+const changeColorYellow = document.querySelector('.circle-yellow');
+if (changeColorYellow){
+  changeColorYellowAnim();
+}
+
+function changeColorYellowAnim(){
+  gsap.to(".circle-yellow, .circle-violet", {
+    background: "rgba(195.50, 195.50, 195.50, 0.40)",
+    scrollTrigger: {
+        trigger: ".left-side__el:first-child",
+        start: "top 55%",
+        end: "top 30%",
+        toggleActions: "play none reverse reset",
+        scrub: true,
+        //markers: true
+    },
+  });
+  if (width >= 1024){
+    gsap.to(".circle-violet", {
+      bottom: "5%",
+      left: "85%",
+      immediateRender: false,
+      scrollTrigger: {
+          trigger: ".left-side__el:first-child",
+          start: "top 95%",
+          end: "top 20%",
+          toggleActions: "play none reverse reset",
+          scrub: 0.5,
+          //markers: true
+      },
+    });
+  }
+
+  gsap.to(".circle-yellow, .circle-violet", {
+    background: "rgba(0, 250, 235, 0.40);",
+    immediateRender: false,
+    scrollTrigger: {
+        trigger: ".left-side__el--2",
+        start: "top 55%",
+        end: "top 30%",
+        toggleActions: "play none reverse reset",
+        scrub: true,
+        markers: true
+    },
+  }); 
 }
 

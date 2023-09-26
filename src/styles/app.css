@@ -729,9 +729,19 @@ body[data-menu] .scroll-indication {
     margin: 0px 120px;
   }
 }
+@media (min-width: 730px) {
+  .projects {
+    margin: 0px 132px;
+  }
+}
 @media (min-width: 800px) {
   .projects {
-    margin: 0px 144px;
+    margin: 0px 160px;
+  }
+}
+@media (min-width: 850px) {
+  .projects {
+    margin: 0px 184px;
   }
 }
 @media (min-width: 1024px) {
