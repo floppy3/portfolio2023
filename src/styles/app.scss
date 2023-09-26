@@ -42,6 +42,7 @@ body{
     left: 0;
     right: 0;
     z-index: 60;
+    mix-blend-mode: difference;
     @media (min-width: $q-mobile1){
         margin: 32px 30px;
     }
@@ -192,9 +193,10 @@ body[data-menu] main{
 /* logo */
 .menu__flo a{
     font-size: 22px;
-    color: $c-text;
+    color: $c-bg;
+    mix-blend-mode: difference;
     padding: 4px 10px 2px;
-    border: 1px solid #0F0F0F;
+    border: 1px solid $c-bg;
     border-radius: 20px;
     @media (min-width:$q-desktop){
         font-size: 25px;

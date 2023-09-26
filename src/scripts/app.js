@@ -128,7 +128,7 @@ function changeColorYellowAnim(){
         end: "top 30%",
         toggleActions: "play none reverse reset",
         scrub: true,
-        markers: true
+        //markers: true
     },
   }); 
 }

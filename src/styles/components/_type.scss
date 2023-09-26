@@ -27,6 +27,10 @@ body, .menu__el a {
   color: $c-text;
   font-weight: 400;
 }
+.menu__el a{
+  color: $c-bg;
+  mix-blend-mode: difference;
+}
 
 .menu__el a {
   font-family: ITC Garamond Std Light, serif;
