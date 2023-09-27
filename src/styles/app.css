@@ -127,6 +127,11 @@ body, .menu__el a {
 }
 
 .menu__el a {
+  color: #cdcdcd;
+  mix-blend-mode: difference;
+}
+
+.menu__el a {
   font-family: ITC Garamond Std Light, serif;
   font-size: 79px;
 }
@@ -333,6 +338,7 @@ body {
   left: 0;
   right: 0;
   z-index: 60;
+  mix-blend-mode: difference;
 }
 @media (min-width: 380px) {
   .menu {
@@ -366,6 +372,7 @@ body {
   flex-direction: column;
   justify-content: center;
   row-gap: 40px;
+  mix-blend-mode: none;
 }
 @media (min-width: 1024px) {
   .menu__liste {
@@ -380,6 +387,7 @@ body {
     left: 0;
     flex-direction: initial;
     background-color: initial;
+    mix-blend-mode: difference;
   }
 }
 .menu__burger {
@@ -406,7 +414,7 @@ body {
   position: absolute;
   height: 1px;
   width: 32px;
-  background: #0F0F0F;
+  background: #FCFCFC;
   opacity: 1;
   right: 0;
   transform: rotate(0deg);
@@ -492,9 +500,10 @@ body[data-menu] main {
 /* logo */
 .menu__flo a {
   font-size: 22px;
-  color: #0F0F0F;
+  color: #f0f0f0;
+  mix-blend-mode: difference;
   padding: 4px 10px 2px;
-  border: 1px solid #0F0F0F;
+  border: 1px solid #ffffff;
   border-radius: 20px;
 }
 @media (min-width: 1200px) {
@@ -522,6 +531,7 @@ body[data-menu] main {
   margin: 0 33px;
   padding-top: 141.89px;
   /* 48px + 93.89px*/
+  /* responsive tablet pour skills */
 }
 .about .title--big {
   max-width: 9ch;
@@ -533,11 +543,16 @@ body[data-menu] main {
 .about .scroll-indication {
   position: fixed;
   display: flex;
+  mix-blend-mode: difference;
   gap: 8px;
   z-index: 1;
   right: 33px;
   bottom: 32px;
   opacity: 1;
+}
+.about .scroll-indication p {
+  color: #b9b9b9;
+  mix-blend-mode: difference;
 }
 @media (min-width: 380px) {
   .about .scroll-indication {
@@ -548,14 +563,14 @@ body[data-menu] main {
 @media (min-width: 1024px) {
   .about .scroll-indication {
     right: 50%;
-    bottom: 102px;
+    bottom: 40px;
     transform: translateX(50%);
   }
 }
-@media (min-width: 1450px) {
+@media (min-width: 1600px) {
   .about .scroll-indication {
     right: 50%;
-    bottom: 132px;
+    bottom: 88px;
   }
 }
 .about .skills {
@@ -605,14 +620,32 @@ body[data-menu] main {
     transform: rotate(-15deg) translateX(-31px);
   }
 }
+@media (min-width: 750px) {
+  .about .skills {
+    margin-top: 0px;
+    transform: translateY(-157px);
+  }
+}
 @media (min-width: 1024px) {
   .about .skills {
     margin-top: 137px;
+    transform: translateY(0px);
   }
 }
 @media (min-width: 1450px) {
   .about .skills {
     margin-top: 171px;
+  }
+}
+@media (min-width: 750px) {
+  .about .about__el {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .about .about__el {
+    display: initial;
   }
 }
 @media (min-width: 380px) {
@@ -654,6 +687,8 @@ body[data-menu] .scroll-indication {
   top: -2px;
   right: -12px;
   animation: animate 1s infinite;
+  stroke: #b3b3b3;
+  mix-blend-mode: difference;
 }
 
 @keyframes animate {
@@ -769,6 +804,11 @@ body[data-menu] .scroll-indication {
     max-width: 48ch;
   }
 }
+@media (min-width: 1600px) {
+  .projects {
+    justify-content: space-around;
+  }
+}
 
 /* Projects LAPTOP */
 .projects .cta {
@@ -830,6 +870,11 @@ body[data-menu] .scroll-indication {
 /* LAST */
 .last {
   margin: 0px 33px;
+  /*@media (min-width: $q-desktop2){
+      .txt{
+          margin-bottom: 142px;
+        }
+  } */
 }
 .last .txt {
   margin-bottom: 19px;
@@ -842,14 +887,6 @@ body[data-menu] .scroll-indication {
 @media (min-width: 1024px) {
   .last {
     margin: 0px 44px;
-  }
-  .last .txt {
-    margin-bottom: 132px;
-  }
-}
-@media (min-width: 1450px) {
-  .last .txt {
-    margin-bottom: 142px;
   }
 }
 
@@ -866,7 +903,7 @@ footer .place {
   display: none;
 }
 footer a {
-  /* color: $c-text; */
+  color: #0F0F0F;
   font-size: var(--footer);
 }
 @media (min-width: 1024px) {
@@ -875,10 +912,9 @@ footer a {
     justify-content: space-between;
     align-items: baseline;
     padding: 30px;
-    position: fixed;
-    bottom: 0;
+    /*bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     border-top: 1px solid #0F0F0F;
   }
   footer a {

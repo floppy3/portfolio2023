@@ -195,10 +195,10 @@ body[data-menu] main{
 /* logo */
 .menu__flo a{
     font-size: 22px;
-    color: $c-bg;
+    color: #f0f0f0;
     mix-blend-mode: difference;
     padding: 4px 10px 2px;
-    border: 1px solid $c-bg;
+    border: 1px solid #ffffff;
     border-radius: 20px;
     @media (min-width:$q-desktop){
         font-size: 25px;
@@ -233,11 +233,16 @@ body[data-menu] main{
     .scroll-indication{
         position: fixed;
         display: flex;
+        mix-blend-mode: difference;
         gap: 8px;
         z-index: 1;
         right: 33px;
         bottom: 32px;
         opacity: 1;
+        p{
+            color: #b9b9b9;
+            mix-blend-mode: difference;
+        }
         @media (min-width:$q-mobile1){
             right: 30px;
             bottom: 32px;
@@ -295,11 +300,29 @@ body[data-menu] main{
                 }
             }
         }
+        @media (min-width: 750px){
+            margin-top: 0px;
+            transform: translateY(-157px);
+        }
         @media (min-width:$q-laptop){
             margin-top: 137px;
+            transform: translateY(0px);
         }
         @media (min-width:$q-desktop2){
             margin-top: 171px;
+        }
+    }
+
+    /* responsive tablet pour skills */
+
+    .about__el{
+        @media (min-width: 750px){
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (min-width:$q-laptop){
+            display: initial;
+            
         }
     }
 
@@ -335,6 +358,8 @@ body[data-menu] .scroll-indication{
     top: -2px;
     right: -12px;
     animation: animate 1s infinite;
+    stroke: #b3b3b3;
+    mix-blend-mode: difference;
 }
 @keyframes animate{
     0%{
@@ -535,11 +560,9 @@ footer{
     justify-content: space-between;
     align-items: baseline;
     padding: 30px;
-    border-top: 1px solid $c-bg;
-    mix-blend-mode: difference;
+    border-top: 1px solid $c-text;
     a{
-        color: $c-bg; 
-        mix-blend-mode: difference;
+        color: $c-text; 
         font-size: var(--footer);
     }
     
@@ -551,7 +574,7 @@ footer{
         /*bottom: 0;
         left: 0;
         right: 0; */
-        border-top: 1px solid $c-bg;
+        border-top: 1px solid $c-text;
         a{
             font-size: var(--footer);
         }

@@ -85,24 +85,25 @@ if (width >= 1024){
 }
 
 /* change color circle yellow */
-
+const listColors = ["rgba(195.50, 195.50, 195.50, 0.40)", "rgba(0, 250, 235, 0.4)", "rgba(114, 97, 227, 0.4)", "rgba(213, 213, 202, 1)", "rgba(208, 184, 180, 1)"];
 const changeColorYellow = document.querySelector('.circle-yellow');
+const listDiv = [".left-side__el:first-child",".left-side__el--2", ".left-side__el--3", ".left-side__el--4", ".left-side__el--5"];
 if (changeColorYellow){
   changeColorYellowAnim();
 }
 
 function changeColorYellowAnim(){
-  gsap.to(".circle-yellow, .circle-violet", {
-    background: "rgba(195.50, 195.50, 195.50, 0.40)",
-    scrollTrigger: {
-        trigger: ".left-side__el:first-child",
+  for (let i = 0; i < listDiv.length; i++) {
+    ScrollTrigger.create({
+        trigger: listDiv[i],
         start: "top 55%",
         end: "top 30%",
+        animation:gsap.to(".circle-yellow, .circle-violet", {background:listColors[i], immediateRender:false}),
         toggleActions: "play none reverse reset",
-        scrub: true,
         //markers: true
-    },
-  });
+    });
+    console.log(listDiv[i]);
+  }
   if (width >= 1024){
     gsap.to(".circle-violet", {
       bottom: "5%",
@@ -119,17 +120,5 @@ function changeColorYellowAnim(){
     });
   }
 
-  gsap.to(".circle-yellow, .circle-violet", {
-    background: "rgba(0, 250, 235, 0.40);",
-    immediateRender: false,
-    scrollTrigger: {
-        trigger: ".left-side__el--2",
-        start: "top 55%",
-        end: "top 30%",
-        toggleActions: "play none reverse reset",
-        scrub: true,
-        //markers: true
-    },
-  }); 
 }
 
