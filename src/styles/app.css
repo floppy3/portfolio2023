@@ -374,6 +374,10 @@ body {
   row-gap: 40px;
   mix-blend-mode: none;
 }
+.menu__liste .menu__el:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
 @media (min-width: 1024px) {
   .menu__liste {
     display: flex;
@@ -905,6 +909,14 @@ footer .place {
 footer a {
   color: #0F0F0F;
   font-size: var(--footer);
+}
+footer a:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+footer ul li:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
 }
 @media (min-width: 1024px) {
   footer {

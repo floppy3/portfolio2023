@@ -73,6 +73,12 @@ body{
         mix-blend-mode: none;
         //background-color: $c-bg;
         //transition: transform 0.4s ease-out;
+        .menu__el{
+            &:hover{
+                transform: scale(1.02);
+                transition: transform 0.3s;
+            }
+        }
         @media (min-width: $q-laptop){
             display: flex;
             opacity: 1;
@@ -564,6 +570,14 @@ footer{
     a{
         color: $c-text; 
         font-size: var(--footer);
+        &:hover{
+            transform: scale(1.02);
+            transition: transform 0.3s;
+        }
+    }
+    ul li:hover{
+        transform: scale(1.02);
+        transition: transform 0.3s;
     }
     
     @media (min-width: $q-laptop){
