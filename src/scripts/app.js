@@ -27,6 +27,20 @@ if (width < 1024){
     }
 }
 
+/* CTA */ 
+
+var btns = document.querySelectorAll('.cta');
+btns.forEach((btn)=> {
+  btn.onmousemove = function (e) {
+    var x = e.pageX - btn.offsetLeft;
+    var y = e.pageY - btn.offsetTop;
+    btn.style.setProperty('--x', x + 'px');
+    btn.style.setProperty('--y', y + 'px');
+  };
+});
+
+
+
 /* scroll indication */
 const scrollIndication = document.querySelector('.scroll-indication');
 if (scrollIndication){

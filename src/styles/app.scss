@@ -505,6 +505,43 @@ body[data-menu] .scroll-indication{
 	        background-color: $c-text;
             order: 4;
             box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.18);
+            transition: all 0.5s ease;
+            overflow: hidden;
+            position: relative;
+            &:hover{
+                //color: black;
+            }
+            &:before {
+                --size: 0;
+                content: '';
+                position: absolute;
+                left: var(--x);
+                top: var(--y);
+                width: var(--size);
+                height: var(--size);
+                background: radial-gradient(circle closest-side, rgb(107, 107, 107), transparent);
+                transform: translate(-50%, -50%);
+                transition: width .2s ease, height .2s ease;
+            }
+            &:hover::before {
+                --size:15vw;
+            }
+            span{
+                position: relative;
+            }
+            &--2:before{
+                background: radial-gradient(circle closest-side, rgb(36 127 121), transparent);
+            }
+            &--3:before{
+                background: radial-gradient(circle closest-side, rgb(84 76 137), transparent);
+            }
+            &--4:before{
+                background: radial-gradient(circle closest-side, rgb(109 109 103), transparent);
+            }
+            &--5:before{
+                background: radial-gradient(circle closest-side, rgb(101 77 73), transparent);
+            }
+
         }
         .right-side{
             display: flex;
