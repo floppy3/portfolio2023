@@ -279,7 +279,7 @@ body[data-menu] main{
             width: fit-content;
             &:nth-child(1) {
                 transform: rotate(-30deg);
-                margin-bottom: 20px;
+                margin-bottom: 24px;
                 align-self: start;
             }&:nth-child(2) {
                 transform: rotate(13deg);
@@ -293,6 +293,11 @@ body[data-menu] main{
             &:nth-child(4) {
                 transform: rotate(3deg);
                 align-self: end;
+            }
+            @media (min-width: $q-mobile1){
+                &:nth-child(1) {
+                    margin-bottom: 20px;
+                }
             }
             @media (min-width:$q-laptop){
                 padding: 6px 40px 7px;
